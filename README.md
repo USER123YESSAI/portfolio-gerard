@@ -58,3 +58,4 @@ npm run dev         # Démarrer le client sur http://localhost:3000
 
 ## 📄 Licence
 Tous droits réservés © 2026 Yessaïn Nanadoumadji.
+# portfolio-gerard
