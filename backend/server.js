@@ -11,6 +11,7 @@ const apiRoutes = require("./routes/api.routes");
 const adminRoutes = require("./routes/admin.routes");
 const authRoutes = require("./routes/auth.routes");
 const errorHandler = require("./middleware/errorHandler");
+const ensureAdminFromEnv = require("./utils/ensureAdmin");
 
 // ── Validation des variables d'environnement critiques ─────────────────────
 if (!process.env.JWT_SECRET) {
@@ -121,6 +122,8 @@ const start = async () => {
     // Préserver strictement les tables et données existantes
     await sequelize.sync();
     console.log("Modèles synchronisés (tables et données existantes préservées).");
+
+    await ensureAdminFromEnv();
 
     app.listen(PORT, () => {
       console.log(`Serveur démarré sur http://localhost:${PORT}`);
