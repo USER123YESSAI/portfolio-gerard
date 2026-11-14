@@ -32,16 +32,16 @@ export default function AdminSidebar() {
   const { logout } = useAuth();
 
   return (
-    <aside className="w-64 bg-white border-r border-[#e5dccb] min-h-screen flex flex-col shrink-0">
+    <aside className="w-64 bg-white border-r border-[#d7e3dc] min-h-screen flex flex-col shrink-0">
       {/* Brand Header */}
-      <div className="p-6 border-b border-[#e5dccb] flex items-center justify-between">
+      <div className="p-6 border-b border-[#d7e3dc] flex items-center justify-between">
         <div>
           <Link
             href="/admin/dashboard"
-            className="text-xl font-bold font-serif-custom text-[#111827] flex items-center gap-1"
+            className="text-xl font-bold font-serif-custom text-[#0f1f1c] flex items-center gap-1"
           >
-            YN<span className="text-[#b45309]">.</span>
-            <span className="text-xs font-sans font-bold bg-[#1a3826] text-white px-2 py-0.5 rounded ml-2">
+            GJ<span className="text-[#0f766e]">.</span>
+            <span className="text-xs font-sans font-bold bg-[#0f766e] text-white px-2 py-0.5 rounded ml-2">
               ADMIN
             </span>
           </Link>
@@ -64,8 +64,8 @@ export default function AdminSidebar() {
               href={href}
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm transition-all ${
                 isActive
-                  ? "bg-[#1a3826] text-white font-semibold shadow-xs"
-                  : "text-gray-700 hover:text-[#1a3826] hover:bg-[#f3ece0]/60 font-medium"
+                  ? "bg-[#0f766e] text-white font-semibold shadow-xs"
+                  : "text-gray-700 hover:text-[#0f766e] hover:bg-[#eaf1ed]/80 font-medium"
               }`}
             >
               <Icon size={18} className={isActive ? "text-white" : "text-gray-500"} />
@@ -76,11 +76,11 @@ export default function AdminSidebar() {
       </nav>
 
       {/* Bottom Shortcuts & Logout */}
-      <div className="p-4 border-t border-[#e5dccb] bg-[#f7f4ec]/50 space-y-2">
+      <div className="p-4 border-t border-[#d7e3dc] bg-[#f6f8f7] space-y-2">
         <Link
           href="/"
           target="_blank"
-          className="flex items-center justify-between px-3.5 py-2 rounded-lg text-xs font-semibold text-gray-700 hover:text-[#1a3826] hover:bg-white border border-transparent hover:border-[#e5dccb] transition-all"
+          className="flex items-center justify-between px-3.5 py-2 rounded-lg text-xs font-semibold text-gray-700 hover:text-[#0f766e] hover:bg-white border border-transparent hover:border-[#d7e3dc] transition-all"
         >
           <span>Voir le site public</span>
           <ExternalLink size={14} />

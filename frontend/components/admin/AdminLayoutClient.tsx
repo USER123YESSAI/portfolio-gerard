@@ -34,10 +34,10 @@ export default function AdminLayoutClient({
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#f7f4ec]">
+      <div className="min-h-screen flex items-center justify-center bg-[#f6f8f7]">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-8 h-8 border-[3px] border-[#1a3826] border-t-transparent rounded-full animate-spin" />
-          <span className="text-sm font-semibold text-[#4b5563]">
+          <div className="w-8 h-8 border-[3px] border-[#0f766e] border-t-transparent rounded-full animate-spin" />
+          <span className="text-sm font-semibold text-[#465a55]">
             Chargement de l&apos;espace administrateur...
           </span>
         </div>
@@ -48,7 +48,7 @@ export default function AdminLayoutClient({
   const pageTitle = pageTitles[pathname] ?? "";
 
   return (
-    <div className="flex min-h-screen bg-[#f7f4ec] text-[#111827]">
+    <div className="flex min-h-screen bg-[#f6f8f7] text-[#0f1f1c]">
       {/* Desktop Sidebar */}
       <div className="hidden lg:block">
         <AdminSidebar />
@@ -70,7 +70,7 @@ export default function AdminLayoutClient({
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top Header Bar */}
-        <header className="sticky top-0 z-30 bg-white border-b border-[#e5dccb] px-6 py-4 flex items-center justify-between shadow-sm">
+        <header className="sticky top-0 z-30 bg-white border-b border-[#d7e3dc] px-6 py-4 flex items-center justify-between shadow-sm">
           <div className="flex items-center gap-4">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}

@@ -41,7 +41,7 @@ export default function AdminProjectsPage() {
     titre: "",
     description: "",
     technologies: "",
-    categorie: "Full-Stack",
+    categorie: "Mathématiques",
     lien_demo: "",
     lien_github: "",
     date_realisation: "",
@@ -80,7 +80,7 @@ export default function AdminProjectsPage() {
       titre: "",
       description: "",
       technologies: "",
-      categorie: "Full-Stack",
+      categorie: "Mathématiques",
       lien_demo: "",
       lien_github: "",
       date_realisation: "",
@@ -99,7 +99,7 @@ export default function AdminProjectsPage() {
       technologies: Array.isArray(project.technologies)
         ? project.technologies.join(", ")
         : (project.technologies as unknown as string) || "",
-      categorie: project.categorie || "Full-Stack",
+      categorie: project.categorie || "Mathématiques",
       lien_demo: project.lien_demo || "",
       lien_github: project.lien_github || "",
       date_realisation: project.date_realisation
@@ -183,10 +183,11 @@ export default function AdminProjectsPage() {
   };
 
   const categories = [
-    "Full-Stack",
-    "Front-End",
-    "Back-End",
-    "Mobile",
+    "Mathématiques",
+    "Physique",
+    "Sciences de l'Ingénieur",
+    "Informatique",
+    "TIPE / Académique",
     "Autre",
   ];
   const filteredProjects = projects.filter((p) => {

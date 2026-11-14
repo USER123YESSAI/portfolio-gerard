@@ -31,13 +31,13 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f7f4ec] px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center bg-[#f6f8f7] px-4 py-12">
       <div className="w-full max-w-md">
         {/* Back link */}
         <div className="mb-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-gray-600 hover:text-[#1a3826] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-gray-600 hover:text-[#0f766e] transition-colors"
           >
             <ArrowLeft size={14} />
             <span>Retour sur le site public</span>
@@ -46,13 +46,13 @@ export default function AdminLoginPage() {
 
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="w-14 h-14 bg-[#1a3826] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
+          <div className="w-14 h-14 bg-[#0f766e] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm">
             <Lock size={24} className="text-white" />
           </div>
-          <h1 className="text-2xl font-bold font-serif-custom text-[#111827]">
+          <h1 className="text-2xl font-bold font-serif-custom text-[#0f1f1c]">
             Espace Administrateur
           </h1>
-          <p className="text-[#4b5563] text-sm mt-1">
+          <p className="text-[#465a55] text-sm mt-1">
             Connectez-vous pour gérer votre portfolio
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function AdminLoginPage() {
         {/* Card Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white border border-[#e5dccb] rounded-2xl p-8 space-y-5 shadow-sm"
+          className="bg-white border border-[#d7e3dc] rounded-2xl p-8 space-y-5 shadow-sm"
         >
           {error && (
             <div className="flex items-center gap-2 text-red-700 text-sm bg-red-50 border border-red-200 p-3.5 rounded-lg">
@@ -72,7 +72,7 @@ export default function AdminLoginPage() {
           <div>
             <label
               htmlFor="email"
-              className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-1.5"
+              className="block text-xs font-bold uppercase tracking-wider text-[#0f1f1c] mb-1.5"
             >
               Adresse Email
             </label>
@@ -82,15 +82,15 @@ export default function AdminLoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-[#e5dccb] rounded-lg text-sm text-[#111827] placeholder:text-gray-400 focus:outline-none focus:border-[#1a3826] focus:ring-1 focus:ring-[#1a3826] transition-all"
-              placeholder="admin@portfolio.com"
+              className="w-full px-4 py-3 bg-white border border-[#d7e3dc] rounded-lg text-sm text-[#0f1f1c] placeholder:text-gray-400 focus:outline-none focus:border-[#0f766e] focus:ring-1 focus:ring-[#0f766e] transition-all"
+              placeholder="gongnongerard05@gmail.com"
             />
           </div>
 
           <div>
             <label
               htmlFor="password"
-              className="block text-xs font-bold uppercase tracking-wider text-[#111827] mb-1.5"
+              className="block text-xs font-bold uppercase tracking-wider text-[#0f1f1c] mb-1.5"
             >
               Mot de passe
             </label>
@@ -100,7 +100,7 @@ export default function AdminLoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-[#e5dccb] rounded-lg text-sm text-[#111827] placeholder:text-gray-400 focus:outline-none focus:border-[#1a3826] focus:ring-1 focus:ring-[#1a3826] transition-all"
+              className="w-full px-4 py-3 bg-white border border-[#d7e3dc] rounded-lg text-sm text-[#0f1f1c] placeholder:text-gray-400 focus:outline-none focus:border-[#0f766e] focus:ring-1 focus:ring-[#0f766e] transition-all"
               placeholder="••••••••"
             />
           </div>
@@ -108,7 +108,7 @@ export default function AdminLoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 bg-[#1a3826] hover:bg-[#142a1d] disabled:opacity-50 text-white font-semibold text-sm rounded-lg shadow-sm transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full py-3 bg-[#0f766e] hover:bg-[#115e59] disabled:opacity-50 text-white font-semibold text-sm rounded-lg shadow-sm transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
           >
             {loading ? (
               <>
