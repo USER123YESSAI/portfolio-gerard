@@ -149,7 +149,9 @@ export default function Timeline({
                         className="text-xs font-mono"
                         style={{ color: "var(--body-text)" }}
                       >
-                        {formatDate(item.start)} — {formatDate(item.end)}
+                        {item.start
+                          ? `${formatDate(item.start)} — ${formatDate(item.end)}`
+                          : "En cours"}
                       </span>
                     </div>
                     <h3

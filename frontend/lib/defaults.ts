@@ -1,25 +1,25 @@
 import type { SiteSettings } from "@/types";
 
 export const DEFAULT_SETTINGS: SiteSettings = {
-  site_title: "Yessaïn Nanadoumadji — Développeur Full-Stack",
+  site_title: "Gérard Jonathan Iahli Gong-Non Moundou — Étudiant en CPGE | EPF Africa Dakar",
   site_description:
-    "Portfolio professionnel de Yessaïn Nanadoumadji, développeur full-stack. Découvrez mes projets, compétences et parcours.",
-  hero_title: "Développeur Full-Stack",
-  hero_subtitle: "Licence en Conception des Systèmes d’Information — EPF Africa, Dakar",
-  bio: "Jeune diplômé en Conception des Systèmes d’Information à l'ISI, Dakar. Je conçois des applications web modernes, du back-end robuste aux interfaces soignées — avec le souci du code propre, maintenable et utile.",
+    "Portfolio personnel de Gérard Jonathan Iahli Gong-Non Moundou, étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar.",
+  hero_title: "Étudiant en Classes Préparatoires (CPGE)",
+  hero_subtitle: "Classes Préparatoires aux Grandes Écoles (CPGE) — EPF Africa, Dakar",
+  bio: "Étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar. Passionné par les sciences, l'analyse rigoureuse et la résolution de problèmes complexes en mathématiques, physique et sciences de l'ingénieur.",
   career_goal:
-    "Recherche un stage ou une alternance en développement full-stack pour mettre en pratique mes compétences et contribuer à des projets innovants.",
-  email: "nanadoumadjiyessain@gmail.com",
-  phone: "+221 77 000 00 00",
+    "Poursuivre mon cursus en école d'ingénieurs et approfondir mes compétences scientifiques et techniques au service de projets innovants.",
+  email: "gongnongerard05@gmail.com",
+  phone: "",
   location: "Dakar, Sénégal",
   social_links: {
-    github: "https://github.com/YessainDev",
-    linkedin: "https://linkedin.com/in/yessain",
+    github: "",
+    linkedin: "",
   },
   profile_photo: "/images/profil.png",
   about_photo: "/images/about.png",
-  about_title: "Un profil full stack dans le concret.",
+  about_title: "Rigueur scientifique et esprit d'analyse.",
   about_text:
-    "Jeune diplômé en Conception des Systèmes d’Information à l'ISI de Dakar, je conçois et développe des interfaces React dynamiques, des API REST performantes et des architectures robustes connectées à des bases de données relationnelles.",
-  about_languages: "Français (courant), Anglais technique",
+    "Actuellement en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar, je construis des bases solides en mathématiques, physique et sciences de l'ingénieur, tout en développant méthode, autonomie et capacité de modélisation.",
+  about_languages: "",
 };

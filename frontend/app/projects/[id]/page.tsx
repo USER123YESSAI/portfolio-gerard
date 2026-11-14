@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   try {
     const project = await getProject(Number(id));
-    return { title: `${project.titre} - Yessaïn Nanadoumadji`, description: project.description };
+    return { title: `${project.titre} - Gérard Jonathan Moundou`, description: project.description };
   } catch {
     return { title: "Projet introuvable" };
   }

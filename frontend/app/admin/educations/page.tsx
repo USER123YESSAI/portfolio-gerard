@@ -264,7 +264,7 @@ export default function AdminEducationsPage() {
                     setForm({ ...form, intitule: e.target.value })
                   }
                   className={inputClass}
-                  placeholder="ex: Bachelor CSI (Conception de Systèmes d'Information)"
+                  placeholder="ex: Classes Préparatoires aux Grandes Écoles (CPGE)"
                 />
               </div>
 
@@ -280,7 +280,7 @@ export default function AdminEducationsPage() {
                     setForm({ ...form, etablissement: e.target.value })
                   }
                   className={inputClass}
-                  placeholder="ex: ISI, Dakar"
+                  placeholder="ex: EPF Africa Dakar"
                 />
               </div>
 

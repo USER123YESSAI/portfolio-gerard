@@ -16,10 +16,10 @@ export function formatFullDate(date?: string) {
 }
 
 export const skillCategories: Record<string, string> = {
-  langages: "Langages",
-  frameworks: "Frameworks & Librairies",
-  outils: "Outils & Bases de données",
-  soft_skills: "Soft Skills",
+  langages: "Sciences & Fondamentaux",
+  frameworks: "Modélisation & SI",
+  outils: "Outils & Méthodes",
+  soft_skills: "Savoir-être & Soft Skills",
 };
 
 export const categoryColors: Record<string, string> = {

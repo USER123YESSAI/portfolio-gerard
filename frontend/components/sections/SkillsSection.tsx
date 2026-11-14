@@ -15,10 +15,10 @@ interface CategoryConfig {
 }
 
 const categoryMeta: Record<string, CategoryConfig> = {
-  langages: { label: "Langages", icon: Code2 },
-  frameworks: { label: "Frameworks & Libs", icon: Layers },
+  langages: { label: "Sciences & Fondamentaux", icon: Code2 },
+  frameworks: { label: "Modélisation & SI", icon: Layers },
   outils: { label: "Outils & Méthodes", icon: Wrench },
-  soft_skills: { label: "Soft Skills", icon: Users },
+  soft_skills: { label: "Savoir-être & Soft Skills", icon: Users },
 };
 
 export default function SkillsSection({ skills }: SkillsSectionProps) {

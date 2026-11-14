@@ -18,7 +18,7 @@ export default function ProjectsGrid({
   const shouldReduceMotion = useReducedMotion();
 
   const allCategories = useMemo(() => {
-    const defaultOrder = ["Full-Stack", "Front-End", "Back-End", "Mobile"];
+    const defaultOrder = ["Mathématiques", "Physique", "Sciences de l'Ingénieur", "Informatique"];
     const presentCats = [
       ...new Set(projects.map((p) => p.categorie).filter(Boolean)),
     ] as string[];
@@ -141,11 +141,14 @@ export default function ProjectsGrid({
                   className="font-bold text-lg mb-1 font-serif-custom"
                   style={{ color: "var(--heading-color)" }}
                 >
-                  Aucun projet trouvé dans cette catégorie
+                  {projects.length === 0
+                    ? "Aucun projet publié pour le moment"
+                    : "Aucun projet trouvé dans cette catégorie"}
                 </p>
                 <p className="text-sm" style={{ color: "var(--body-text)" }}>
-                  Sélectionnez un autre filtre ou consultez l'ensemble des
-                  réalisations.
+                  {projects.length === 0
+                    ? "Les travaux et projets académiques seront ajoutés prochainement."
+                    : "Sélectionnez un autre filtre ou consultez l'ensemble des réalisations."}
                 </p>
               </motion.div>
             )}

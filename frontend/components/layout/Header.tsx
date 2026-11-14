@@ -114,7 +114,7 @@ export default function Header({
           className="group flex items-center text-2xl font-extrabold tracking-tight font-serif-custom transition-colors duration-300"
           style={{ color: "var(--heading-color)" }}
         >
-          <span>YN</span>
+          <span>GJ</span>
           <motion.span
             animate={{ scale: [1, 1.3, 1] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}

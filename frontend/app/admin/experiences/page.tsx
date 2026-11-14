@@ -280,7 +280,7 @@ export default function AdminExperiencesPage() {
                     setForm({ ...form, entreprise: e.target.value })
                   }
                   className={inputClass}
-                  placeholder="ex: ISI, Dakar"
+                  placeholder="ex: EPF Africa Dakar"
                 />
               </div>
 

@@ -79,7 +79,7 @@ const downloadCV = asyncHandler(async (req, res) => {
     return res.status(404).json({ message: "Fichier CV introuvable." });
   }
 
-  res.download(filePath, "CV-Yessain-Nanadoumadji.pdf");
+  res.download(filePath, "CV-Gerard-Jonathan-Moundou.pdf");
 });
 
 const uploadCV = asyncHandler(async (req, res) => {

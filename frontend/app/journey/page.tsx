@@ -11,7 +11,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Parcours",
-  description: "Mon parcours professionnel, formations académiques et certifications.",
+  description:
+    "Parcours académique et formation en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar de Gérard Jonathan Iahli Gong-Non Moundou.",
 };
 
 export const revalidate = 60;
@@ -56,12 +57,26 @@ export default async function JourneyPage() {
               Mon Parcours
             </h1>
             <p className="text-base sm:text-lg" style={{ color: "var(--body-text)" }}>
-              Expériences professionnelles, cursus académique et certifications techniques.
+              Cursus académique, travaux scientifiques et étapes de formation en Classes Préparatoires aux Grandes Écoles.
             </p>
           </div>
           <Timeline
             experiences={experiences}
-            educations={educations}
+            educations={
+              educations.length > 0
+                ? educations
+                : [
+                    {
+                      id: 1,
+                      intitule: "Classes Préparatoires aux Grandes Écoles (CPGE)",
+                      etablissement: "EPF Africa Dakar",
+                      date_debut: "",
+                      date_fin: null,
+                      description:
+                        "Formation scientifique pluridisciplinaire : mathématiques, physique, sciences de l'ingénieur et méthodologie de résolution de problèmes.",
+                    },
+                  ]
+            }
             certifications={certifications}
           />
         </div>

@@ -8,9 +8,9 @@ interface FooterProps {
 }
 
 export default function Footer({ settings }: FooterProps) {
-  const email = settings?.email || "nanadoumadjiyessain@gmail.com";
-  const github = settings?.social_links?.github || "https://github.com/YessainDev";
-  const linkedin = settings?.social_links?.linkedin || "https://linkedin.com/in/yessain";
+  const email = settings?.email || "gongnongerard05@gmail.com";
+  const github = settings?.social_links?.github;
+  const linkedin = settings?.social_links?.linkedin;
 
   return (
     <footer className="border-t transition-colors duration-300" style={{ borderColor: "var(--nav-border)", backgroundColor: "var(--background)" }}>
@@ -20,15 +20,15 @@ export default function Footer({ settings }: FooterProps) {
           <div className="flex items-center justify-center gap-3 mb-3">
             <span className="w-8 h-[1px]" style={{ backgroundColor: "var(--label-color)" }} />
             <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--label-color)" }}>
-              COLLABORATION
+              CONTACT
             </span>
             <span className="w-8 h-[1px]" style={{ backgroundColor: "var(--label-color)" }} />
           </div>
           <h3 className="text-3xl sm:text-4xl font-bold font-serif-custom mb-3" style={{ color: "var(--heading-color)" }}>
-            Vous avez un projet en tête ?
+            Échanger ou collaborer ?
           </h3>
           <p className="max-w-lg mx-auto text-sm sm:text-base mb-8" style={{ color: "var(--body-text)" }}>
-            Discutons ensemble de vos besoins et de votre vision technique pour construire une application moderne et pérenne.
+            N&apos;hésitez pas à me contacter pour toute opportunité académique, projet scientifique ou prise de contact.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -58,34 +58,38 @@ export default function Footer({ settings }: FooterProps) {
               className="inline-block text-2xl font-extrabold font-serif-custom mb-1 transition-colors"
               style={{ color: "var(--heading-color)" }}
             >
-              YN<span style={{ color: "var(--logo-dot)" }}>.</span>
+              GJ<span style={{ color: "var(--logo-dot)" }}>.</span>
             </Link>
             <p className="text-sm" style={{ color: "var(--body-text)" }}>
-              Développeur Full-Stack & Étudiant à l'ISI, Dakar
+              Étudiant en Classes Préparatoires (CPGE) — EPF Africa Dakar
             </p>
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded-lg border transition-all shadow-xs"
-              style={{ backgroundColor: "var(--icon-bg)", borderColor: "var(--border)", color: "var(--icon-color)" }}
-              aria-label="GitHub"
-            >
-              <Github size={18} />
-            </a>
-            <a
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded-lg border transition-all shadow-xs"
-              style={{ backgroundColor: "var(--icon-bg)", borderColor: "var(--border)", color: "var(--icon-color)" }}
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={18} />
-            </a>
+            {github && github !== "#" && (
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg border transition-all shadow-xs"
+                style={{ backgroundColor: "var(--icon-bg)", borderColor: "var(--border)", color: "var(--icon-color)" }}
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+            )}
+            {linkedin && linkedin !== "#" && (
+              <a
+                href={linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-lg border transition-all shadow-xs"
+                style={{ backgroundColor: "var(--icon-bg)", borderColor: "var(--border)", color: "var(--icon-color)" }}
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+            )}
             <a
               href={`mailto:${email}`}
               className="p-2.5 rounded-lg border transition-all shadow-xs"
@@ -99,7 +103,7 @@ export default function Footer({ settings }: FooterProps) {
 
         {/* Copyright */}
         <div className="mt-8 text-center text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Yessaïn Nanadoumadji. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} Gérard Jonathan Iahli Gong-Non Moundou. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

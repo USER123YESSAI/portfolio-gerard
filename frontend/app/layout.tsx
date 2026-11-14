@@ -15,40 +15,40 @@ const playfair = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://yessain-nanadoumadji.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://portfolio-gerard.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Yessaïn Nanadoumadji — Développeur Full-Stack",
-    template: "%s | Yessaïn Nanadoumadji",
+    default: "Gérard Jonathan Iahli Gong-Non Moundou — Étudiant en CPGE | EPF Africa Dakar",
+    template: "%s | Gérard Jonathan Moundou",
   },
   description:
-    "Portfolio professionnel de Yessaïn Nanadoumadji, développeur full-stack. Découvrez mes projets, compétences en conception logicielle et parcours.",
+    "Portfolio personnel de Gérard Jonathan Iahli Gong-Non Moundou, étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar. Découvrez son parcours académique, ses compétences et ses centres d'intérêt.",
   keywords: [
-    "Yessaïn Nanadoumadji",
-    "Yessain Nanadoumadji",
-    "Nanadoumadji Yessaïn",
-    "Yessain",
-    "Développeur Full-Stack",
-    "Développeur Web Dakar",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Conception des Systèmes d'Information",
-    "Portfolio Yessaïn Nanadoumadji"
+    "Gérard Jonathan Iahli Gong-Non Moundou",
+    "Gérard Jonathan Moundou",
+    "Gérard Moundou",
+    "CPGE",
+    "Classes Préparatoires aux Grandes Écoles",
+    "EPF Africa Dakar",
+    "Étudiant Ingénieur Dakar",
+    "Mathématiques",
+    "Physique",
+    "Sciences de l'Ingénieur",
+    "Portfolio Gérard Jonathan"
   ],
-  authors: [{ name: "Yessaïn Nanadoumadji", url: siteUrl }],
-  creator: "Yessaïn Nanadoumadji",
+  authors: [{ name: "Gérard Jonathan Iahli Gong-Non Moundou", url: siteUrl }],
+  creator: "Gérard Jonathan Iahli Gong-Non Moundou",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Yessaïn Nanadoumadji — Développeur Full-Stack",
+    title: "Gérard Jonathan Iahli Gong-Non Moundou — Étudiant en CPGE",
     description:
-      "Portfolio professionnel de Yessaïn Nanadoumadji — découvrez mes projets, compétences et parcours.",
+      "Portfolio personnel de Gérard Jonathan Iahli Gong-Non Moundou, étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar.",
     url: siteUrl,
-    siteName: "Yessaïn Nanadoumadji Portfolio",
+    siteName: "Portfolio — Gérard Jonathan Moundou",
     locale: "fr_FR",
     type: "website",
     images: [
@@ -56,15 +56,15 @@ export const metadata: Metadata = {
         url: "/images/profil.png",
         width: 1200,
         height: 630,
-        alt: "Yessaïn Nanadoumadji — Développeur Full-Stack",
+        alt: "Gérard Jonathan Iahli Gong-Non Moundou — Étudiant en CPGE",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yessaïn Nanadoumadji — Développeur Full-Stack",
+    title: "Gérard Jonathan Iahli Gong-Non Moundou — Étudiant en CPGE",
     description:
-      "Portfolio professionnel de Yessaïn Nanadoumadji — projets, compétences et parcours.",
+      "Portfolio personnel de Gérard Jonathan Iahli Gong-Non Moundou, étudiant en CPGE à EPF Africa Dakar.",
     images: ["/images/profil.png"],
   },
   robots: {
@@ -78,9 +78,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "3c4rwlF8Ve_zPpNy-l4rkl0YhbUNrLP3z6SR_4DUmfc",
-  },
 };
 
 const jsonLd = {
@@ -89,46 +86,37 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": `${siteUrl}/#person`,
-      name: "Yessaïn Nanadoumadji",
-      alternateName: ["Yessain Nanadoumadji", "Nanadoumadji Yessaïn"],
-      jobTitle: "Développeur Full-Stack",
+      name: "Gérard Jonathan Iahli Gong-Non Moundou",
+      alternateName: ["Gérard Jonathan Moundou", "Gérard Moundou"],
+      jobTitle: "Étudiant en Classes Préparatoires aux Grandes Écoles (CPGE)",
       description:
-        "Développeur Full-Stack spécialisé en React, Next.js, Node.js et en conception des systèmes d'information.",
+        "Étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar.",
       url: siteUrl,
       image: `${siteUrl}/images/profil.png`,
-      email: "nanadoumadjiyessain@gmail.com",
+      email: "gongnongerard05@gmail.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Dakar",
         addressCountry: "Sénégal",
       },
-      alumniOf: {
+      affiliation: {
         "@type": "EducationalOrganization",
-        name: "ISI",
+        name: "EPF Africa Dakar",
       },
-      sameAs: [
-        "https://github.com/YessainDev",
-        "https://linkedin.com/in/yessain"
-      ],
       knowsAbout: [
-        "React",
-        "Next.js",
-        "Node.js",
-        "TypeScript",
-        "JavaScript",
-        "Tailwind CSS",
-        "Express",
-        "Sequelize",
-        "MySQL",
-        "REST API"
+        "Mathématiques",
+        "Physique",
+        "Sciences de l'Ingénieur",
+        "Informatique",
+        "Méthodologie scientifique"
       ]
     },
     {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
       url: siteUrl,
-      name: "Yessaïn Nanadoumadji Portfolio",
-      description: "Portfolio professionnel de Yessaïn Nanadoumadji",
+      name: "Portfolio — Gérard Jonathan Iahli Gong-Non Moundou",
+      description: "Portfolio personnel de Gérard Jonathan Iahli Gong-Non Moundou",
       publisher: {
         "@id": `${siteUrl}/#person`,
       },
@@ -149,7 +137,6 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} h-full`}
     >
       <head>
-        <meta name="google-site-verification" content="3c4rwlF8Ve_zPpNy-l4rkl0YhbUNrLP3z6SR_4DUmfc" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('portfolio-theme');var theme=t==='dark'?'dark':'light';document.documentElement.setAttribute('data-theme',theme);}catch(e){}})()`,

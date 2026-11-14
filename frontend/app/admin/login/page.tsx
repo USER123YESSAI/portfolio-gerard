@@ -126,7 +126,7 @@ export default function AdminLoginPage() {
 
         <div className="text-center mt-6">
           <p className="text-xs text-gray-500">
-            Portfolio Yessaïn Nanadoumadji — Tous droits réservés
+            Portfolio Gérard Jonathan Iahli Gong-Non Moundou — Tous droits réservés
           </p>
         </div>
       </div>

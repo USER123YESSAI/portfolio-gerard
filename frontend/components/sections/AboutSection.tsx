@@ -13,20 +13,20 @@ interface AboutSectionProps {
 
 const defaultQualities = [
   {
-    title: "Rigueur technique",
-    desc: "Code propre, architecture modulaire et respect des bonnes pratiques.",
+    title: "Rigueur analytique",
+    desc: "Méthode, précision mathématique et structuration claire des raisonnements.",
   },
   {
-    title: "Apprentissage rapide",
-    desc: "Curiosité active et montée en compétence fluide sur de nouvelles stacks.",
+    title: "Capacité de travail",
+    desc: "Persévérance, gestion du temps et autonomie face aux exigences des CPGE.",
   },
   {
-    title: "Communication professionnelle",
-    desc: "Capacité d'écoute, reporting clair et collaboration efficace en équipe.",
+    title: "Esprit scientifique",
+    desc: "Modélisation de systèmes, démarche expérimentale et résolution de problèmes.",
   },
   {
-    title: "Résolution de problèmes",
-    desc: "Esprit d'analyse pour transformer des défis complexes en solutions viables.",
+    title: "Travail en équipe",
+    desc: "Entraide, communication claire et collaboration efficace sur des travaux collectifs.",
   },
 ];
 
@@ -42,12 +42,11 @@ export default function AboutSection({ settings }: AboutSectionProps) {
   }, [photoUrl]);
 
   const title =
-    settings.about_title || "Un profil full stack dans le concret.";
+    settings.about_title || "Rigueur scientifique et esprit d'analyse.";
   const description =
     settings.about_text ||
-    "Jeune diplômé en Conception des Systèmes d’Information à l'ISI de Dakar, je conçois et développe des interfaces React dynamiques, des API REST performantes et des architectures robustes connectées à des bases de données relationnelles.";
-  const languages =
-    settings.about_languages || "Français (courant), Anglais technique";
+    "Actuellement en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar, je construis des bases solides en mathématiques, physique et sciences de l'ingénieur, tout en développant méthode, autonomie et capacité de modélisation.";
+  const languages = settings.about_languages;
   const location = settings.location || "Dakar, Sénégal";
 
   return (
@@ -101,7 +100,7 @@ export default function AboutSection({ settings }: AboutSectionProps) {
               >
                 <Image
                   src={imgSrc}
-                  alt="Photo À propos - Yessaïn Nanadoumadji"
+                  alt="Photo À propos - Gérard Jonathan Iahli Gong-Non Moundou"
                   fill
                   className="object-cover group-hover:scale-108 transition-transform duration-500"
                   sizes="(max-width: 640px) 144px, 160px"
@@ -144,7 +143,7 @@ export default function AboutSection({ settings }: AboutSectionProps) {
             >
               <GraduationCap size={16} style={{ color: "var(--primary)" }} />
               <span>
-                Licence en Conception des Systèmes d’Information — EPF Africa, Dakar
+                Classes Préparatoires aux Grandes Écoles (CPGE) — EPF Africa, Dakar
               </span>
             </motion.div>
           </motion.div>
@@ -222,32 +221,34 @@ export default function AboutSection({ settings }: AboutSectionProps) {
             </motion.div>
 
             {/* Languages Card with subtle hover */}
-            <motion.div
-              initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              whileHover={shouldReduceMotion ? {} : { x: 4 }}
-              className="p-5 sm:p-6 rounded-2xl shadow-xs transition-shadow duration-300 hover:shadow-md flex items-center gap-3"
-              style={{
-                backgroundColor: "var(--card)",
-                border: "1px solid var(--border)",
-              }}
-            >
+            {languages && (
               <motion.div
-                animate={{ scale: [1, 1.4, 1] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="w-2.5 h-2.5 rounded-full shrink-0"
-                style={{ backgroundColor: "var(--primary)" }}
-              />
-              <p
-                className="text-sm font-medium"
-                style={{ color: "var(--heading-color)" }}
+                initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                whileHover={shouldReduceMotion ? {} : { x: 4 }}
+                className="p-5 sm:p-6 rounded-2xl shadow-xs transition-shadow duration-300 hover:shadow-md flex items-center gap-3"
+                style={{
+                  backgroundColor: "var(--card)",
+                  border: "1px solid var(--border)",
+                }}
               >
-                <strong className="font-semibold">Langues :</strong>{" "}
-                <span style={{ color: "var(--body-text)" }}>{languages}</span>
-              </p>
-            </motion.div>
+                <motion.div
+                  animate={{ scale: [1, 1.4, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  className="w-2.5 h-2.5 rounded-full shrink-0"
+                  style={{ backgroundColor: "var(--primary)" }}
+                />
+                <p
+                  className="text-sm font-medium"
+                  style={{ color: "var(--heading-color)" }}
+                >
+                  <strong className="font-semibold">Langues :</strong>{" "}
+                  <span style={{ color: "var(--body-text)" }}>{languages}</span>
+                </p>
+              </motion.div>
+            )}
           </div>
         </div>
       </div>

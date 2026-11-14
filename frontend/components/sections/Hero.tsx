@@ -23,11 +23,9 @@ export default function Hero({ settings }: HeroProps) {
     setImgSrc(photoUrl);
   }, [photoUrl]);
 
-  const githubUrl =
-    settings.social_links?.github || "https://github.com/YessainDev";
-  const linkedinUrl =
-    settings.social_links?.linkedin || "https://linkedin.com/in/yessain";
-  const emailAddress = settings.email || "nanadoumadjiyessain@gmail.com";
+  const githubUrl = settings.social_links?.github;
+  const linkedinUrl = settings.social_links?.linkedin;
+  const emailAddress = settings.email || "gongnongerard05@gmail.com";
 
   // Stagger container animation
   const containerVariants = {
@@ -81,18 +79,18 @@ export default function Hero({ settings }: HeroProps) {
                     style={{ backgroundColor: "var(--label-color)" }}
                   />
                 </span>
-                DISPONIBLE POUR STAGE / ALTERNANCE
+                ÉTUDIANT EN CPGE — EPF AFRICA DAKAR
               </span>
             </motion.div>
 
             {/* Serif Name Heading with reveal */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold font-serif-custom tracking-tight leading-[1.05]"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif-custom tracking-tight leading-[1.08]"
               style={{ color: "var(--heading-color)" }}
             >
-              Yessaïn <br />
-              <span className="gradient-text">Nanadoumadji</span>
+              Gérard Jonathan <br />
+              <span className="gradient-text">Iahli Gong-Non Moundou</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -101,7 +99,7 @@ export default function Hero({ settings }: HeroProps) {
               className="text-xl sm:text-2xl font-serif-custom italic"
               style={{ color: "var(--accent-text)" }}
             >
-              {settings.hero_title || "Développeur Full-Stack"}
+              {settings.hero_title || "Étudiant en Classes Préparatoires (CPGE)"}
             </motion.h2>
 
             {/* Bio text */}
@@ -111,7 +109,7 @@ export default function Hero({ settings }: HeroProps) {
               style={{ color: "var(--body-text)" }}
             >
               {settings.bio ||
-                "Jeune diplômé en Conception des Systèmes d’Information à l'ISI, Dakar. Je conçois des applications web modernes, du back-end robuste aux interfaces soignées — avec le souci du code propre, maintenable et utile."}
+                "Étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar. Passionné par les sciences, l'analyse rigoureuse et la résolution de problèmes complexes en mathématiques, physique et sciences de l'ingénieur."}
             </motion.p>
 
             {/* Action Buttons with Micro-interactions */}
@@ -154,28 +152,32 @@ export default function Hero({ settings }: HeroProps) {
               className="flex items-center gap-6 pt-2 text-sm font-medium"
               style={{ color: "var(--body-text)" }}
             >
-              <motion.a
-                whileHover={{ y: -3, scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 transition-colors hover:text-[var(--primary)]"
-              >
-                <Github size={17} />
-                <span>GitHub</span>
-              </motion.a>
-              <motion.a
-                whileHover={{ y: -3, scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                href={linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 transition-colors hover:text-[var(--primary)]"
-              >
-                <Linkedin size={17} />
-                <span>LinkedIn</span>
-              </motion.a>
+              {githubUrl && githubUrl !== "#" && (
+                <motion.a
+                  whileHover={{ y: -3, scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 transition-colors hover:text-[var(--primary)]"
+                >
+                  <Github size={17} />
+                  <span>GitHub</span>
+                </motion.a>
+              )}
+              {linkedinUrl && linkedinUrl !== "#" && (
+                <motion.a
+                  whileHover={{ y: -3, scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 transition-colors hover:text-[var(--primary)]"
+                >
+                  <Linkedin size={17} />
+                  <span>LinkedIn</span>
+                </motion.a>
+              )}
               <motion.a
                 whileHover={{ y: -3, scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
@@ -224,7 +226,7 @@ export default function Hero({ settings }: HeroProps) {
               >
                 <Image
                   src={imgSrc}
-                  alt="Yessaïn Nanadoumadji"
+                  alt="Gérard Jonathan Iahli Gong-Non Moundou"
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 288px, 320px"
@@ -268,7 +270,7 @@ export default function Hero({ settings }: HeroProps) {
                     className="text-[11px]"
                     style={{ color: "var(--body-text)" }}
                   >
-                    ISI
+                    EPF Africa Dakar
                   </div>
                 </div>
               </motion.div>
@@ -300,13 +302,13 @@ export default function Hero({ settings }: HeroProps) {
               className="text-2xl sm:text-3xl font-bold font-serif-custom"
               style={{ color: "var(--heading-color)" }}
             >
-              2+
+              CPGE
             </div>
             <div
               className="text-xs sm:text-sm mt-0.5"
               style={{ color: "var(--body-text)" }}
             >
-              Années de code
+              Classes Préparatoires
             </div>
           </motion.div>
 
@@ -320,13 +322,13 @@ export default function Hero({ settings }: HeroProps) {
               className="text-2xl sm:text-3xl font-bold font-serif-custom"
               style={{ color: "var(--heading-color)" }}
             >
-              8+
+              EPF Africa
             </div>
             <div
               className="text-xs sm:text-sm mt-0.5"
               style={{ color: "var(--body-text)" }}
             >
-              Projets réalisés
+              Campus de Dakar
             </div>
           </motion.div>
 
@@ -340,13 +342,13 @@ export default function Hero({ settings }: HeroProps) {
               className="text-2xl sm:text-3xl font-bold font-serif-custom"
               style={{ color: "var(--heading-color)" }}
             >
-              9+
+              Sciences
             </div>
             <div
               className="text-xs sm:text-sm mt-0.5"
               style={{ color: "var(--body-text)" }}
             >
-              Technologies
+              Maths, Physique &amp; SI
             </div>
           </motion.div>
 
@@ -359,13 +361,13 @@ export default function Hero({ settings }: HeroProps) {
               className="text-2xl sm:text-3xl font-bold font-serif-custom"
               style={{ color: "var(--primary)" }}
             >
-              2026
+              Dakar
             </div>
             <div
               className="text-xs sm:text-sm mt-0.5"
               style={{ color: "var(--body-text)" }}
             >
-              Diplôme CSI
+              Sénégal
             </div>
           </motion.div>
         </div>

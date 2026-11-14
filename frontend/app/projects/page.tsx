@@ -8,7 +8,7 @@ import type { Project } from "@/types";
 export const metadata: Metadata = {
   title: "Projets",
   description:
-    "Découvrez mes réalisations et projets de développement web et applications full-stack.",
+    "Découvrez les projets et travaux scientifiques et académiques de Gérard Jonathan Iahli Gong-Non Moundou, étudiant en CPGE à EPF Africa Dakar.",
 };
 
 export const revalidate = 60;

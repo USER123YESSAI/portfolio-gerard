@@ -24,10 +24,10 @@ import {
 import type { Skill } from "@/types";
 
 const categories = [
-  { key: "langages", label: "Langages", icon: Code2 },
-  { key: "frameworks", label: "Frameworks & Libs", icon: Layers },
+  { key: "langages", label: "Sciences & Fondamentaux", icon: Code2 },
+  { key: "frameworks", label: "Modélisation & SI", icon: Layers },
   { key: "outils", label: "Outils & Méthodes", icon: Wrench },
-  { key: "soft_skills", label: "Soft Skills", icon: Users },
+  { key: "soft_skills", label: "Savoir-être & Soft Skills", icon: Users },
 ];
 
 export default function AdminSkillsPage() {

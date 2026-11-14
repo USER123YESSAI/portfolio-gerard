@@ -252,7 +252,7 @@ export default function AdminSettingsPage() {
                       setSettings({ ...settings, site_title: e.target.value })
                     }
                     className={inputClass}
-                    placeholder="ex: Portfolio — Yessaïn Nanadoumadji"
+                    placeholder="ex: Portfolio — Gérard Jonathan Iahli Gong-Non Moundou"
                   />
                 </div>
                 <div>
@@ -365,7 +365,7 @@ export default function AdminSettingsPage() {
                     setSettings({ ...settings, about_title: e.target.value })
                   }
                   className={inputClass}
-                  placeholder="ex: Un profil full stack ancré dans le concret."
+                  placeholder="ex: Rigueur scientifique et esprit d'analyse."
                 />
               </div>
 
@@ -380,7 +380,7 @@ export default function AdminSettingsPage() {
                     setSettings({ ...settings, about_text: e.target.value })
                   }
                   className={`${inputClass} resize-none`}
-                  placeholder="ex: Étudiant en Licence à l'ISI Dakar, je conçois et développe des interfaces React soignées..."
+                  placeholder="ex: Étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar..."
                 />
               </div>
 

@@ -7,7 +7,8 @@ import type { SiteSettings } from "@/types";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez Yessaïn Nanadoumadji pour un projet, un stage ou une opportunité professionnelle.",
+  description:
+    "Contactez Gérard Jonathan Iahli Gong-Non Moundou, étudiant en Classes Préparatoires aux Grandes Écoles (CPGE) à EPF Africa Dakar.",
 };
 
 export default async function ContactPage() {
@@ -38,7 +39,7 @@ export default async function ContactPage() {
                   Me Contacter
                 </h1>
                 <p className="text-base leading-relaxed" style={{ color: "var(--body-text)" }}>
-                  Vous avez une opportunité de stage, une alternance ou un projet à développer ? N&apos;hésitez pas à m&apos;écrire directement.
+                  Vous souhaitez me contacter pour une opportunité académique, un projet scientifique ou toute autre demande ? N&apos;hésitez pas à m&apos;écrire directement.
                 </p>
               </div>
 
@@ -48,19 +49,19 @@ export default async function ContactPage() {
                     <Mail size={18} />
                   </div>
                   <a
-                    href={`mailto:${settings.email || "nanadoumadjiyessain@gmail.com"}`}
+                    href={`mailto:${settings.email || "gongnongerard05@gmail.com"}`}
                     className="contact-link transition-colors"
                     style={{ color: "var(--foreground)" }}
                   >
-                    {settings.email || "nanadoumadjiyessain@gmail.com"}
+                    {settings.email || "gongnongerard05@gmail.com"}
                   </a>
                 </div>
-                {(settings.phone || "+221 77 000 00 00") && (
+                {settings.phone && (
                   <div className="flex items-center gap-3 font-medium" style={{ color: "var(--foreground)" }}>
                     <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: "var(--icon-bg)", border: "1px solid var(--border)", color: "var(--icon-color)" }}>
                       <Phone size={18} />
                     </div>
-                    <span style={{ color: "var(--foreground)" }}>{settings.phone || "+221 77 000 00 00"}</span>
+                    <span style={{ color: "var(--foreground)" }}>{settings.phone}</span>
                   </div>
                 )}
                 {(settings.location || "Dakar, Sénégal") && (
