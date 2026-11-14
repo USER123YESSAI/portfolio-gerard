@@ -19,13 +19,16 @@ const commonOptions = {
   },
 };
 
-// Détection de la nécessité du chiffrement SSL (ex: Aiven MySQL ou configuration explicite)
+// Détection de la nécessité du chiffrement SSL (ex: TiDB Cloud, Aiven MySQL ou configuration explicite)
 const shouldUseSSL =
   process.env.DB_SSL === "true" ||
   (process.env.DATABASE_URL &&
-    (process.env.DATABASE_URL.includes("aivencloud.com") ||
+    (process.env.DATABASE_URL.includes("tidbcloud.com") ||
+      process.env.DATABASE_URL.includes("aivencloud.com") ||
       process.env.DATABASE_URL.includes("ssl-mode=REQUIRED"))) ||
-  (process.env.DB_HOST && process.env.DB_HOST.includes("aivencloud.com"));
+  (process.env.DB_HOST &&
+    (process.env.DB_HOST.includes("tidbcloud.com") ||
+      process.env.DB_HOST.includes("aivencloud.com")));
 
 const dialectOptions = shouldUseSSL
   ? {

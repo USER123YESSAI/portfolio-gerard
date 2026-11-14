@@ -1,6 +1,6 @@
-# Portfolio Professionnel Full-Stack — Yessaïn Nanadoumadji
+# Portfolio Personnel — Gérard Jonathan Iahli Gong-Non Moundou
 
-Portfolio moderne, dynamique et sécurisé conçu avec **Next.js (App Router, Tailwind CSS, TypeScript)** et une API REST robuste avec **Node.js (Express, Sequelize, MySQL)**.
+Portfolio moderne, dynamique et sécurisé conçu avec **Next.js (App Router, Tailwind CSS, TypeScript)** et une API REST robuste avec **Node.js (Express 5, Sequelize, MySQL)** pour **Gérard Jonathan Iahli Gong-Non Moundou** (CPGE — EPF Africa Dakar).
 
 ---
 
@@ -28,7 +28,7 @@ Portfolio moderne, dynamique et sécurisé conçu avec **Next.js (App Router, Ta
 - **Déploiement :**
   - **Frontend :** Vercel
   - **Backend :** Render
-  - **Base de données :** Aiven (MySQL Cloud avec chiffrement SSL)
+  - **Base de données :** TiDB Cloud (MySQL 8 managée avec chiffrement SSL/TLS)
 
 ---
 
@@ -57,5 +57,4 @@ npm run dev         # Démarrer le client sur http://localhost:3000
 ---
 
 ## 📄 Licence
-Tous droits réservés © 2026 Yessaïn Nanadoumadji.
-# portfolio-gerard
+Tous droits réservés © 2026 Gérard Jonathan Iahli Gong-Non Moundou.
